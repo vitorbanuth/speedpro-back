@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "back",
+      "script": "server.js",
+      "args": "",
+      "cwd": "./", 
+      "env": {
+	"PGSSLMODE": "no-verify"
+      }
+    }
+  ]
+}
