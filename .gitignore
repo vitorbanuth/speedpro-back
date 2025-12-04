@@ -1,0 +1,6 @@
+.env
+node_modules/
+.adminjs/
+uploads/
+src/fonts/
+private/
