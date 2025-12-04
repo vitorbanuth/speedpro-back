@@ -38,7 +38,7 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 
 
 app.use(cors({
-  origin: ["http://localhost:5173", "http://srv762003.hstgr.cloud"], // ou a URL do seu frontend
+  origin: ["http://localhost:5173", "http://srv762003.hstgr.cloud", "https://progweb.ooh.sh", "https://api.ooh.sh"], // ou a URL do seu frontend
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));

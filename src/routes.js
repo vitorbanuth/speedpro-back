@@ -1,9 +1,7 @@
 import express from "express";
 import { homeController } from "./controllers/homeControllers.js";
-import PdfController from "./controllers/pdfControllers.js";
 import footerController from "./controllers/footerController.js";
 import ProductsService from "./services/ProductsService.js";
-import CsvController from "./controllers/csvControllers.js";
 import { uploadStudentFiles } from "./config/multer.js";
 import CardService from './services/cardsService.js'
 import FaqService from "./services/faqService.js";
@@ -12,22 +10,6 @@ import HomeService from "./services/homeService.js";
 export const router = express.Router();
 
 router.get("/", homeController.index);
-
-router.get("/admin/pdf/student/:id", PdfController.generateStudentPdfById);
-
-router.get("/admin/pdf/all", PdfController.generateAllStudentsPdfs);
-
-router.get("/admin/pdf/selected", PdfController.generateSelectedStudentsPdfs);
-
-router.get(
-  "/admin/csv/profis-student/:id",
-  CsvController.generateStudentCsvById
-);
-router.get("/admin/csv/profis-all", CsvController.generateAllStudentsCsv);
-router.get(
-  "/admin/csv/profis-selected",
-  CsvController.generateSelectedStudentsCsv
-);
 
 router.get("/getFooterData", footerController.getFooterData);
 
